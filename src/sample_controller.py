@@ -1,8 +1,10 @@
+import pygame
+import Circle
+import Points
 
 class Controller:
-  
   def __init__(self):
-    #setup pygame data
+  #setup pygame data
     
   def mainloop(self):
     #select state loop

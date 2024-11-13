@@ -1,18 +1,18 @@
 
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
-# << Project Title >>
-## CS110 Final Project  << Semester, Year >>
+# Circle Clicker
+## CS110 Final Project  Fall, 2024
 
 ## Team Members
 
-<< List team member names >>
+Noel Maldonado
 
 ***
 
 ## Project Description
 
-<< Give an overview of your project >>
+A game where you earn points by clicking the circles. Circles spawn in random places.
 
 ***    
 
@@ -20,7 +20,7 @@
 
 ### Initial Design
 
-![initial gui](assets/gui.jpg)
+![initial gui sketch](assets/gui.jpg)
 
 ### Final Design
 
@@ -30,15 +30,17 @@
 
 ### Features
 
-1. << Feature 1 >>
-2. << Feature 2 >>
-3. << Feature 3 >>
-4. << Feature 4 >>
-5. << Feature 5 >>
+1. start menu
+2. circle spawn in random spot
+3. click gives points and spawns new circle
+4. pause menu
+5. game over menu
+6. database holding the highest score and player
 
 ### Classes
 
-- << You should have a list of each of your classes with a description >>
+- Circle - Initializes circle and puts it in random place.
+- Points - Adds points when screen is clicked where the circle is located.
 
 ## ATP
 
