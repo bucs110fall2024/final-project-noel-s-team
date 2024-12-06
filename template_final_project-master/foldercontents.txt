@@ -4,3 +4,32 @@ There should only be 2 files in this folder:
 `README.md`
 
 All other files must go into subfolders
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                self.running = False
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                if self.show_start_screen:
+                    self.show_start_screen = False
+                    self.in_game = True
+                    self.game.username = self.get_username()
+                    self.game.spawn_circle()
+                elif self.show_game_over_screen:
+                    x, y = pygame.mouse.get_pos()
+                    if 150 <= x <= 350 and 400 <= y <= 460:
+                        self.reset_game()
+                    elif 450 <= x <= 650 and 400 <= y <= 460:
+                        self.running = False
+                elif self.in_game:
+                    if not self.game.paused:
+                        self.game.check_click(event.pos)
+                elif self.game.paused:
+                    x, y = pygame.mouse.get_pos()
+                    if 300 <= x <= 500 and 400 <= y <= 460:
+                        self.game.paused = False
+                        self.show_pause_menu = False
+                    elif 300 <= x <= 500 and 500 <= y <= 560:
+                        self.show_pause_menu = False
+                        self.game.paused = False
+                        self.reset_game()
+                        

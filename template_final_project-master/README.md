@@ -1,8 +1,5 @@
-
-:warning: Everything between << >> needs to be replaced (remove << >> after replacing)
-
 # Circle Clicker
-## CS110 Final Project  Fall, 2024
+## CS110 Final Project,  Fall 2024
 
 ## Team Members
 
@@ -24,9 +21,12 @@ A game where you earn points by clicking the circles. Circles spawn in random pl
 
 ### Final Design
 
-![final gui](assets/finalgui.jpg)
+![final start gui](assets/finalstartGUI.png)
+![final end gui](assets/finalendGUI.png)
 
 ## Program Design
+
+![final game gui](assets/finalgameGUI.png)
 
 ### Features
 
@@ -39,13 +39,14 @@ A game where you earn points by clicking the circles. Circles spawn in random pl
 
 ### Classes
 
-- Circle - Initializes circle and puts it in random place.
-- Points - Adds points when screen is clicked where the circle is located.
+- Database - Creates a database where the highest score is stored.
+- Game - Initializes the game including the circles and links to database.
 
 ## ATP
 
 | Step                 |Procedure             |Expected Results                   |
-|----------------------|:--------------------:|----------------------------------:|
-|  1                   | Run Counter Program  |GUI window appears with count = 0  |
-|  2                   | click count button   | display changes to count = 1      |
-etc...
+|----------------------|:--------------------:|------------------------------------------------------------------------------:|
+|  1                   | Run Controller       |GUI appears prompting username with a play button                              |
+|  2                   | Click play button    |Game starts, 30 second timer starts                                            |
+|  3                   | Click Circles        |Point counter goes up by 5, new circle spawns in, countdown reset              |
+|  4                   | Game over            |Game over GUI pops up, shows score and high score. option to play again or quit|
